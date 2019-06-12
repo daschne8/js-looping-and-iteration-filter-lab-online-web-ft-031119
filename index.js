@@ -13,21 +13,7 @@ function filter (collection, cb) {
 function findMatching(drivers,name){
   return drivers.filter(function (driver){return driver.toLowerCase() === name.toLowerCase()})
 }
-// function findMatching(drivers, name){
-//   const newCollection = []
-//   for(const driver of drivers){
-//     if (driver === name) {
-//       newCollection.push(name)
-//     }
-//   }
-//   return newCollection
-// }
+
 function fuzzyMatch(drivers, fuzz){
-  const newCollection = []
-  for(const driver in drivers){
-    if (driver[0,fuzz.length].toLowerCase() === fuzz.toLowerCase()) {
-      newCollection.push(driver)
-    }
-  }
-  return newCollection
+  return drivers.filter(function(driver){return (driver.toLowerCase())[0,fuzz.length] === fuzz.toLowerCase()})
 }
