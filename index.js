@@ -5,4 +5,5 @@ function findMatching(drivers, name){
       newCollection.push(name)
     }
   }
+  return newCollection
 }
