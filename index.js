@@ -10,15 +10,18 @@ function filter (collection, cb) {
   return newCollection;
 }
 
-function findMatching(drivers, name){
-  const newCollection = []
-  for(const driver of drivers){
-    if (driver === name) {
-      newCollection.push(name)
-    }
-  }
-  return newCollection
+function findMatching(driver,name){
+  return driver.filter(name)
 }
+// function findMatching(drivers, name){
+//   const newCollection = []
+//   for(const driver of drivers){
+//     if (driver === name) {
+//       newCollection.push(name)
+//     }
+//   }
+//   return newCollection
+// }
 function fuzzyMatch(drivers, fuzz){
   const newCollection = []
   for(const driver in drivers){
