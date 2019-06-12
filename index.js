@@ -11,7 +11,7 @@ function filter (collection, cb) {
 }
 
 function findMatching(drivers,name){
-  return filter(drivers, name)
+  return drivers.filter(function (driver){return driver === name})
 }
 // function findMatching(drivers, name){
 //   const newCollection = []
