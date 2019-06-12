@@ -22,7 +22,7 @@ function findMatching(drivers, name){
 function fuzzyMatch(drivers, fuzz){
   const newCollection = []
   for(const driver in drivers){
-    if (driver[0,fuzz.length] === fuzz) {
+    if (driver[0,fuzz.length].toLowerCase() === fuzz.toLowerCase()) {
       newCollection.push(driver)
     }
   }
